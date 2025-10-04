@@ -1,0 +1,45 @@
+﻿UI/UX & Deployment Lead — Progress Documentation
+Team Member: Joseph Carpenter
+Role: UI/UX & Deployment Lead
+Progress Summary
+1. Frontend Development (V0)
+
+   * Chose to build the frontend using V0 for speed and ease.
+
+   * Exported the V0 frontend, which includes:
+
+      * Textarea for note input
+
+      * Dropdown for mode selection
+
+      * Cards for displaying flashcards and quiz questions
+
+      * Audio player for ElevenLabs summaries
+
+         2. Repository Setup
+
+            * Attempted to clone teammate’s GitHub repo via VS Code, ran into GitHub authentication issues due to password deprecation.
+
+            * Downloaded the repository as a ZIP directly from GitHub as a workaround.
+
+            * Opened the repository in VS Code and prepared it for integration with V0 code.
+
+               3. Integration Plan
+
+                  * Ready to replace placeholder API endpoint (https://example.com/api/generate) in notes-section.tsx with the real backend endpoint once received.
+
+                  * All V0 frontend components are ready to be merged into the repo.
+
+                     4. Deployment Preparation
+
+                        * Project folder organized and ready for deployment to Vercel.
+
+                        * Tested local setup with Node.js optional, ensuring UI components display correctly.
+
+                           5. Next Steps (Awaiting Backend Endpoint)
+
+                              * Replace placeholder API with real endpoint in the frontend.
+
+                              * Deploy the frontend to Vercel and attach a .tech domain if desired.
+
+                              * Finalize Canva slides for pitch with screenshots and feature descriptions.
