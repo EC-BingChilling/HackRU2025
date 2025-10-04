@@ -18,5 +18,5 @@ def summarize_endpoint(text: str):
 
 @app.post("/speak")
 def speak_endpoint(text: str):
-    file = elevenlabs_api.text_to_speech(text)
-    return {"file": file}
+    file_path = elevenlabs_api.text_to_speech(text)
+    return {"file": file_path}
