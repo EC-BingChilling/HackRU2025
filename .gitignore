@@ -16,3 +16,8 @@ venv/
 # OS-specific
 .DS_Store
 Thumbs.db
+
+# environment and secret files
+api.env
+.env
+*.env
