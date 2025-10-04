@@ -3,7 +3,7 @@
 const GEMINI_KEY ="AIzaSyDlB87G2CQrIeJrl7icoEnwAcvaUbXwaJE"
 const ELEVEN_KEY ="sk_22c6139d91d1d74e79d9a7a6434bce261319de20868c1c68"
 
-const BACKEND_URL = "http://localhost:5000"
+const BACKEND_URL = "http://localhost:8000"
 
 import { useState } from "react"
 import { NotesSection } from "@/components/notes-section"
