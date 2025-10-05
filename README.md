@@ -17,7 +17,7 @@ It’s built to make studying conversational and efficient using accessible AI t
 * 🗂️ Store and retrieve learning sessions (via Snowflake)
 * 💻 Clean, minimal, distraction-free UI (Next.js / React)
 
-> 🔗 **Live Frontend:** [https://eduaid.vercel.app](#)
+> 🔗 **Live Frontend:** [https://hack-ru-2025.vercel.app/](#)
 > *(Deployed via Vercel — replace with actual URL once confirmed)*
 
 ---
