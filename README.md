@@ -1,126 +1,164 @@
-# 🚀 HackRU F25 Project — EduAid Pro
+# 🧠 EduAid — AI Study Companion
 
-## 🎯 Overview
-**EduAid Pro** is an **Education-focused AI platform** that transforms messy lecture notes into structured **flashcards, quizzes, and audio study guides**.  
-It’s designed for students, educators, and lifelong learners who want to turn unorganized notes into usable, interactive learning material — instantly.
-
-### 🏷️ Track
-**Education**
-
-### 🏆 Superlatives / Prize Categories
-- 🖼️ Best UI/UX Design  
-- 🌐 Best .Tech Domain Name (MLH)  
-- 🧠 Best Use of Gemini API (MLH)  
-- ❄️ Best Use of Snowflake API (MLH)  
-- 🔊 Best Use of ElevenLabs (MLH)  
-- 💼 Best Entrepreneurial Hack (IDEA)  
-- 🌱 (Stretch) Best Newbie Hack (if rules allow)  
-- 💀 (Fallback) Best Failure to Launch (if anything breaks)
+**HackRU Fall 2025 Project**
+*A personalized AI study assistant that summarizes, speaks, and remembers your notes.*
 
 ---
 
-## 🧩 Core Features (MVP)
-1. **Text Upload**
-   - Paste or upload lecture notes → stored in DB (Snowflake).  
-2. **AI Analysis (Gemini)**
-   - Converts notes into structured flashcards + quizzes in JSON format.  
-3. **Results Output**
-   - Display generated flashcards and quizzes in a simple UI.  
-4. **UI Dashboard**
-   - Clean interface: textarea input + “Education” mode dropdown + result cards.  
-5. **Deployment**
-   - Hosted on Vercel and live at a `.tech` domain.  
+## 📘 Overview
+
+**EduAid** helps students **learn faster and remember more** by turning study material into concise, spoken summaries.
+It’s built to make studying conversational and efficient using accessible AI technologies.
+
+**Key Features (Goal Vision):**
+
+* 🧠 Summarize text intelligently (via Gemini)
+* 🔊 Speak summaries aloud (via ElevenLabs)
+* 🗂️ Store and retrieve learning sessions (via Snowflake)
+* 💻 Clean, minimal, distraction-free UI (Next.js / React)
+
+> 🔗 **Live Frontend:** [https://eduaid.vercel.app](#)
+> *(Deployed via Vercel — replace with actual URL once confirmed)*
 
 ---
 
-## 🌟 Stretch Features
-1. **Snowflake Integration**
-   - Store and retrieve uploaded notes from Snowflake DB.  
-2. **ElevenLabs Integration**
-   - Convert AI summaries into natural audio files.  
-   - “Play Study Guide” button on UI.  
-3. **UI/UX Polish**
-   - Responsive, minimalist dashboard with audio player.  
-4. **Entrepreneurial Layer**
-   - Pitch deck: Problem → Solution → Demo → Market → Monetization.  
-   - SaaS framing: EduAid for students, schools, and edtech platforms.  
+## 📖 Current Status
+
+**Status:** ⚙️ *MVP functional / Backend deployment pending*
+
+EduAid currently runs with:
+
+* ✅ **Live frontend on Vercel**
+* ✅ **Working local MVP FastAPI backend** (`eduaid_mvp/`)
+* ⚠️ **Full backend (`eduaid_backend/`)** under development (Gemini, ElevenLabs, and Snowflake integration in progress)
 
 ---
 
-## 👥 Team Roles
+## 🧩 Project Structure
 
-### 🧑‍💻 You — Backend Lead (Captain)
-- Build the **FastAPI backend** (`/upload`, `/analyze`, `/results`).  
-- Integrate **Gemini**, **Snowflake**, and **ElevenLabs APIs**.  
-- Debug and ensure system stability.  
-- Mentor teammates when stuck.  
-- **Deliverable by 8 PM Saturday:** stable backend tested with Postman.
-
----
-
-### 🤖 Teammate A — AI Prompt & Integration Wrangler
-- Write Gemini prompts:  
-  *“Turn these lecture notes into 5 flashcards and 3 quiz questions in JSON.”*  
-- Integrate Gemini API into `/analyze`.  
-- Add ElevenLabs API for audio summary generation.  
-- Create sample notes for demo testing.  
-- **Deliverable by 8 PM Saturday:** working Gemini → JSON + audio output.
+```
+.
+├── eduaid_backend/            # Full backend (unfinished integration)
+├── eduaid_mvp/                # Minimal working FastAPI backend (MVP)
+│   ├── main.py
+│   ├── requirements.txt
+│   └── start.sh
+├── study-app/                 # React / Next.js frontend (deployed on Vercel)
+│   ├── pages/
+│   ├── components/
+│   └── ...
+├── README.md
+└── other supporting files
+```
 
 ---
 
-### 🎨 Teammate B — UI/UX & Deployment Lead
-- Build the frontend (React or V0):  
-  - Textarea for note input.  
-  - Dropdown for mode selection.  
-  - Cards for displaying flashcards and quiz questions.  
-  - Audio player for ElevenLabs summary.  
-- Deploy to Vercel and attach a `.tech` domain.  
-- Design Canva slides for pitch.  
-- **Deliverable by 8 PM Saturday:** deployed frontend calling backend successfully.
+## 🧪 What Works (MVP)
+
+| Component                     | Status     | Description                                                            |
+| ----------------------------- | ---------- | ---------------------------------------------------------------------- |
+| Frontend (Vercel)             | ✅ Live     | Deployed, fully functional UI connected to backend locally or via API. |
+| `/summarize`                  | ✅ Working  | Accepts text and returns AI-style summary (mocked Gemini response).    |
+| `/history`                    | ✅ Working  | Stores recent summaries in memory (resets on restart).                 |
+| Local FastAPI backend         | ✅ Working  | Lightweight MVP server running on `localhost:8000`.                    |
+| Frontend ↔ Backend connection | ✅ Verified | Tested end-to-end locally.                                             |
+| Voice (ElevenLabs)            | ⚠️ Planned | Placeholder; not yet integrated.                                       |
 
 ---
 
-## 🕒 Timeline
+## 🚧 What’s Broken / Not Yet Implemented
 
-### **Saturday**
-| Time | Tasks | Goal |
-|------|--------|------|
-| 12–3 PM | Backend skeleton, Gemini prompt draft, UI scaffold | End-to-end MVP (ugly but functional) |
-| 3–8 PM | Add Snowflake + ElevenLabs, refine prompts, deploy frontend | All features in place by dinner |
-| 8–11 PM | Debug integrations, record backup demo, create slides | Stable demo ready |
-| 12–6 AM | Sleep | 💤 Recharge for polish day |
-
-### **Sunday**
-| Time | Tasks | Goal |
-|------|--------|------|
-| 6–9 AM | Fix bugs, polish UI, finalize prompts | Working demo with sponsor APIs |
-| 9–10:30 AM | Record final demo, submit to Devpost | ✅ Submission done |
-| 10:30–11 AM | Freeze code, hydrate, prep for judging | Ready for demo |
-| 1–3 PM | Judging | 🏁 Deliver confident pitch |
+| Area                    | Status            | Notes                                                               |
+| ----------------------- | ----------------- | ------------------------------------------------------------------- |
+| Backend deployment      | ❌ Not yet live    | Render / Railway deployment failing (environment detection issues). |
+| Gemini API integration  | 🚧 In progress    | Summaries currently mocked.                                         |
+| ElevenLabs voice output | 🚧 In progress    | Placeholder endpoint only.                                          |
+| Snowflake database      | ❌ Not implemented | Planned for persistent storage and analytics.                       |
+| Authentication          | ❌ Not implemented | Placeholder only.                                                   |
+| Error handling / CORS   | ⚠️ Minimal        | Works locally; needs production config.                             |
 
 ---
 
-## ⚙️ Tech Stack
-**Backend:** FastAPI, Python  
-**Frontend:** React / V0  
-**Database:** Snowflake (fallback: SQLite)  
-**AI APIs:** Gemini (Google), ElevenLabs (MLH Sponsor)  
-**Deployment:** Vercel + `.tech` domain  
-**Design:** Canva (pitch deck), Figma (optional wireframes)  
+## 🛠 How to Run Locally
 
----
+### 1️⃣ Clone the repository
 
-## 🧱 Setup Instructions
-
-### **Backend**
 ```bash
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # (Mac/Linux)
-venv\Scripts\activate     # (Windows)
+git clone https://github.com/EC-BingChilling/HackRU2025.git
+cd HackRU2025
+```
 
-# Install dependencies
-pip install fastapi uvicorn requests snowflake-connector-python python-dotenv
+### 2️⃣ Backend Setup (MVP)
 
-# Run server
-uvicorn main:app --reload
+```bash
+cd eduaid_mvp
+python3 -m venv venv
+source venv/bin/activate    # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+Server runs at [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+### 3️⃣ Frontend Setup
+
+```bash
+cd ../study-app
+npm install
+npm run dev
+```
+
+Frontend runs at [http://localhost:3000](http://localhost:3000)
+
+> 🧩 Make sure the frontend `.env.local` file contains:
+> `NEXT_PUBLIC_API_URL=http://localhost:8000`
+
+---
+
+## 📡 API Endpoints (MVP Only)
+
+| Method | Path         | Description                                                |
+| ------ | ------------ | ---------------------------------------------------------- |
+| `GET`  | `/`          | Health / status check                                      |
+| `POST` | `/summarize` | Accepts `{ text: string }` → returns `{ summary: string }` |
+| `GET`  | `/history`   | Returns in-memory list of `{ input, summary }`             |
+
+**Example Response:**
+
+```json
+{
+  "history": [
+    {
+      "input": "Photosynthesis is how plants make energy...",
+      "summary": "Plants convert light to energy using chlorophyll."
+    }
+  ]
+}
+```
+
+---
+
+## 🧭 Future Roadmap
+
+| Milestone                    | Goal                              | Status         |
+| ---------------------------- | --------------------------------- | -------------- |
+| ✅ MVP (Local API + Frontend) | Functional demo                   | ✅ Complete     |
+| 🧩 Gemini API                | Real summarization                | 🚧 In progress |
+| 🔊 ElevenLabs                | Voice synthesis                   | 🚧 Planned     |
+| 💾 Snowflake DB              | Persistent storage                | 🚧 Pending     |
+| ☁️ Backend Deployment        | Cloud hosting (Render / Railway)  | ❌ Failed       |
+| 🔐 Auth System               | User accounts                     | 🔜 Future      |
+| 📊 Learning Dashboard        | Progress metrics & study insights | 🔜 Future      |
+
+---
+
+## 💬 Summary
+
+EduAid started from a simple question:
+
+> “What if studying felt like talking to an AI tutor?”
+
+In just 48 hours, the team built a working prototype that **summarizes, speaks, and remembers** your notes.
+The backend didn’t quite launch — but the **vision and foundation are solid** and ready to grow.
+
+> “It might not have launched... but it *learned* faster than we did.” 💡
