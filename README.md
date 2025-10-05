@@ -1,40 +1,40 @@
-# 🧠 EduAid — AI Study Companion
+# EduAid — AI Study Companion
 
 **HackRU Fall 2025 Project**
 *A personalized AI study assistant that summarizes, speaks, and remembers your notes.*
 
 ---
 
-## 📘 Overview
+## Overview
 
 **EduAid** helps students **learn faster and remember more** by turning study material into concise, spoken summaries.
 It’s built to make studying conversational and efficient using accessible AI technologies.
 
 **Key Features (Goal Vision):**
 
-* 🧠 Summarize text intelligently (via Gemini)
-* 🔊 Speak summaries aloud (via ElevenLabs)
-* 🗂️ Store and retrieve learning sessions (via Snowflake)
-* 💻 Clean, minimal, distraction-free UI (Next.js / React)
+* Summarize text intelligently (via Gemini)
+* Speak summaries aloud (via ElevenLabs)
+* Store and retrieve learning sessions (via Snowflake)
+* Clean, minimal, distraction-free UI (Next.js / React)
 
-> 🔗 **Live Frontend:** [https://hack-ru-2025.vercel.app/](#)
+> **Live Frontend:** [https://hack-ru-2025.vercel.app/](#)
 > *(Deployed via Vercel — replace with actual URL once confirmed)*
 
 ---
 
-## 📖 Current Status
+## Current Status
 
-**Status:** ⚙️ *MVP functional / Backend deployment pending*
+**Status:** *MVP functional / Backend deployment pending*
 
 EduAid currently runs with:
 
-* ✅ **Live frontend on Vercel**
-* ✅ **Working local MVP FastAPI backend** (`eduaid_mvp/`)
-* ⚠️ **Full backend (`eduaid_backend/`)** under development (Gemini, ElevenLabs, and Snowflake integration in progress)
+* **Live frontend on Vercel**
+* **Working local MVP FastAPI backend** (`eduaid_mvp/`)
+* **Full backend (`eduaid_backend/`)** under development (Gemini, ElevenLabs, and Snowflake integration in progress)
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 
 ```
 .
@@ -53,42 +53,42 @@ EduAid currently runs with:
 
 ---
 
-## 🧪 What Works (MVP)
+## What Works (MVP)
 
-| Component                     | Status     | Description                                                            |
-| ----------------------------- | ---------- | ---------------------------------------------------------------------- |
-| Frontend (Vercel)             | ✅ Live     | Deployed, fully functional UI connected to backend locally or via API. |
-| `/summarize`                  | ✅ Working  | Accepts text and returns AI-style summary (mocked Gemini response).    |
-| `/history`                    | ✅ Working  | Stores recent summaries in memory (resets on restart).                 |
-| Local FastAPI backend         | ✅ Working  | Lightweight MVP server running on `localhost:8000`.                    |
-| Frontend ↔ Backend connection | ✅ Verified | Tested end-to-end locally.                                             |
-| Voice (ElevenLabs)            | ⚠️ Planned | Placeholder; not yet integrated.                                       |
-
----
-
-## 🚧 What’s Broken / Not Yet Implemented
-
-| Area                    | Status            | Notes                                                               |
-| ----------------------- | ----------------- | ------------------------------------------------------------------- |
-| Backend deployment      | ❌ Not yet live    | Render / Railway deployment failing (environment detection issues). |
-| Gemini API integration  | 🚧 In progress    | Summaries currently mocked.                                         |
-| ElevenLabs voice output | 🚧 In progress    | Placeholder endpoint only.                                          |
-| Snowflake database      | ❌ Not implemented | Planned for persistent storage and analytics.                       |
-| Authentication          | ❌ Not implemented | Placeholder only.                                                   |
-| Error handling / CORS   | ⚠️ Minimal        | Works locally; needs production config.                             |
+| Component                     | Status   | Description                                                            |
+| ----------------------------- | -------- | ---------------------------------------------------------------------- |
+| Frontend (Vercel)             | Live     | Deployed, fully functional UI connected to backend locally or via API. |
+| `/summarize`                  | Working  | Accepts text and returns AI-style summary (mocked Gemini response).    |
+| `/history`                    | Working  | Stores recent summaries in memory (resets on restart).                 |
+| Local FastAPI backend         | Working  | Lightweight MVP server running on `localhost:8000`.                    |
+| Frontend ↔ Backend connection | Verified | Tested end-to-end locally.                                             |
+| Voice (ElevenLabs)            | Planned  | Placeholder; not yet integrated.                                       |
 
 ---
 
-## 🛠 How to Run Locally
+## What’s Broken / Not Yet Implemented
 
-### 1️⃣ Clone the repository
+| Area                    | Status          | Notes                                                               |
+| ----------------------- | --------------- | ------------------------------------------------------------------- |
+| Backend deployment      | Not yet live    | Render / Railway deployment failing (environment detection issues). |
+| Gemini API integration  | In progress     | Summaries currently mocked.                                         |
+| ElevenLabs voice output | In progress     | Placeholder endpoint only.                                          |
+| Snowflake database      | Not implemented | Planned for persistent storage and analytics.                       |
+| Authentication          | Not implemented | Placeholder only.                                                   |
+| Error handling / CORS   | Minimal         | Works locally; needs production config.                             |
+
+---
+
+## How to Run Locally
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/EC-BingChilling/HackRU2025.git
 cd HackRU2025
 ```
 
-### 2️⃣ Backend Setup (MVP)
+### 2. Backend Setup (MVP)
 
 ```bash
 cd eduaid_mvp
@@ -100,7 +100,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 
 Server runs at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-### 3️⃣ Frontend Setup
+### 3. Frontend Setup
 
 ```bash
 cd ../study-app
@@ -110,12 +110,12 @@ npm run dev
 
 Frontend runs at [http://localhost:3000](http://localhost:3000)
 
-> 🧩 Make sure the frontend `.env.local` file contains:
+> Make sure the frontend `.env.local` file contains:
 > `NEXT_PUBLIC_API_URL=http://localhost:8000`
 
 ---
 
-## 📡 API Endpoints (MVP Only)
+## API Endpoints (MVP Only)
 
 | Method | Path         | Description                                                |
 | ------ | ------------ | ---------------------------------------------------------- |
@@ -138,21 +138,21 @@ Frontend runs at [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 🧭 Future Roadmap
+## Future Roadmap
 
-| Milestone                    | Goal                              | Status         |
-| ---------------------------- | --------------------------------- | -------------- |
-| ✅ MVP (Local API + Frontend) | Functional demo                   | ✅ Complete     |
-| 🧩 Gemini API                | Real summarization                | 🚧 In progress |
-| 🔊 ElevenLabs                | Voice synthesis                   | 🚧 Planned     |
-| 💾 Snowflake DB              | Persistent storage                | 🚧 Pending     |
-| ☁️ Backend Deployment        | Cloud hosting (Render / Railway)  | ❌ Failed       |
-| 🔐 Auth System               | User accounts                     | 🔜 Future      |
-| 📊 Learning Dashboard        | Progress metrics & study insights | 🔜 Future      |
+| Milestone                  | Goal                              | Status      |
+| -------------------------- | --------------------------------- | ----------- |
+| MVP (Local API + Frontend) | Functional demo                   | Complete    |
+| Gemini API                 | Real summarization                | In progress |
+| ElevenLabs                 | Voice synthesis                   | Planned     |
+| Snowflake DB               | Persistent storage                | Pending     |
+| Backend Deployment         | Cloud hosting (Render / Railway)  | Failed      |
+| Auth System                | User accounts                     | Future      |
+| Learning Dashboard         | Progress metrics & study insights | Future      |
 
 ---
 
-## 💬 Summary
+## Summary
 
 EduAid started from a simple question:
 
@@ -161,4 +161,4 @@ EduAid started from a simple question:
 In just 48 hours, the team built a working prototype that **summarizes, speaks, and remembers** your notes.
 The backend didn’t quite launch — but the **vision and foundation are solid** and ready to grow.
 
-> “It might not have launched... but it *learned* faster than we did.” 💡
+> “It might not have launched... but it *learned* faster than we did.”
